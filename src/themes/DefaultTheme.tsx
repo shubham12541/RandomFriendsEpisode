@@ -9,7 +9,7 @@ const DefaultTheme = () => {
     return createMuiTheme({
         palette: {
           primary: {
-            main: orange[500],
+            main: "#3700B3",
           },
           secondary: {
             main: purple[500],
@@ -18,7 +18,8 @@ const DefaultTheme = () => {
               primary: "rgba(0, 0, 0, 0.87)"
           },
           background: {
-            default: "#ffffff"
+            default: "#eeeeee",
+            paper: "#ffffff"
           },
         },
         typography: {
@@ -52,7 +53,8 @@ const DarkTheme = () => {
               primary: "rgba(255, 255, 255, 0.87)"
           },
           background: {
-            default: "#000000"
+            default: "#121212",
+            paper: "#1f1b24"
           },
         },
         typography: {

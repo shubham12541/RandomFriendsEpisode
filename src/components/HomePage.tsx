@@ -9,9 +9,6 @@ const lightTheme = themes.DefaultTheme();
 const darkTheme = themes.DarkTheme();
 
 
-
-
-
 const defaultTheme = localStorage.getItem("theme");
 let darkModeThemeValue = false;
 if(defaultTheme && defaultTheme != null){
@@ -70,10 +67,7 @@ const HomePage = () => {
                 >
                 
                 { isResultShown && <SuggestorPage />}
-                { !isResultShown && <Button variant="outlined" color="primary" onClick={() => randomButtonClick()}>Randomize it !!</Button> }
-
-                
-
+                { !isResultShown && <Button variant="outlined" color="primary" onClick={() => randomButtonClick()}>Start</Button> }
 
             </Box>
 
