@@ -42,15 +42,19 @@ const HomePage = () => {
                 padding="1rem"
                 bgcolor="background.default"
                 color="text.primary"
+                fontFamily="roboto"
                 >
                     
-                <span>Dark</span>    
+                <span>Dark</span>
                 <Switch
                     checked={isDarkMode}
                     onChange={() => onThemeChange()}
                     name="Dark"
                     inputProps={{ 'aria-label': 'secondary checkbox' }}
                 />
+                
+                {/* <span style={{ float:'right' }} >Github</span> */}
+                
             </Box>
 
             
@@ -62,6 +66,7 @@ const HomePage = () => {
                 alignItems="center"
                 height="100vh"
                 color="text.primary"
+                fontFamily="roboto"
                 >
                 
                 { isResultShown && <SuggestorPage />}

@@ -1,4 +1,4 @@
-import { Box, Button } from '@material-ui/core';
+import { Box, Button, Container } from '@material-ui/core';
 import { fontSize } from '@material-ui/system';
 import React, { useState } from 'react';
 import {DataService} from '../service/DataService';
@@ -13,8 +13,8 @@ const SuggestorPage = () => {
     const episode = data.id.split("_")[1];
 
     return (
-        <div>
-            <img src={data.imageSrc} width="600px" height="300px" alt="episode image"/>
+        <Container maxWidth="sm">
+            <img src={data.imageSrc} width="100%"  alt="episode image"/>
             <Box fontSize="28px" marginBottom="1rem">
                 {data.title}
             </Box>
@@ -28,7 +28,7 @@ const SuggestorPage = () => {
                 Aired on {data.airedOn}
             </Box>
             
-            <Box marginTop="1rem" width="600px">
+            <Box marginTop="1rem" width="100%">
                 {data.summary}
             </Box>
 
@@ -36,7 +36,7 @@ const SuggestorPage = () => {
                 <Button variant="outlined" color="primary" onClick={() => setData(dataService.getRandomEpisodeData())}>Retry</Button>
             </Box>
             
-        </div>
+        </Container>
     )
 
 };
