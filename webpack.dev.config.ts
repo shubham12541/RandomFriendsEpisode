@@ -36,16 +36,12 @@ const config: Configuration = {
         },
       },
       {
-        test: /\.(png|jpg|gif)$/i,
-        dependency: { not: ['url'] },
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-            },
-          },
-        ],
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

@@ -3,6 +3,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import React from 'react';
 import themes from '../themes/DefaultTheme';
 import SuggestorPage from './SuggestorPage';
+
 import {useState} from 'react';
 
 const lightTheme = themes.DefaultTheme();
