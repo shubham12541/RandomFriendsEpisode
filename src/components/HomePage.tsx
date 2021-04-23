@@ -3,6 +3,8 @@ import { ThemeProvider } from '@material-ui/styles';
 import React from 'react';
 import themes from '../themes/DefaultTheme';
 import SuggestorPage from './SuggestorPage';
+import githubDarkIcon from '../images/github_dark.png';
+import githubLightIcon from '../images/github_light.png';
 
 import {useState} from 'react';
 
@@ -16,6 +18,8 @@ if(defaultTheme && defaultTheme != null){
     darkModeThemeValue = defaultTheme === "dark";
 }
 
+
+const githubUrl = "https://github.com/shubham12541/RandomFriendsEpisode";
 
 const HomePage = () => {
 
@@ -41,22 +45,27 @@ const HomePage = () => {
                 bgcolor="background.default"
                 color="text.primary"
                 fontFamily="roboto"
+                display="flex"
+                justifyContent="space-between"
+
                 >
+
+                <Box>
+                    <span>Dark</span>
+                    <Switch
+                        checked={isDarkMode}
+                        onChange={() => onThemeChange()}
+                        name="Dark"
+                        inputProps={{ 'aria-label': 'secondary checkbox' }}
+                    />
+                </Box>    
                     
-                <span>Dark</span>
-                <Switch
-                    checked={isDarkMode}
-                    onChange={() => onThemeChange()}
-                    name="Dark"
-                    inputProps={{ 'aria-label': 'secondary checkbox' }}
-                />
-                
-                {/* <span style={{ float:'right' }} >Github</span> */}
+                <Box>
+                 <a href={githubUrl} target="_blank" rel="noreferrer" > <img src={isDarkMode ? githubLightIcon : githubDarkIcon } /> </a>
+                </Box>
                 
             </Box>
 
-            
-            
             <Box
                 bgcolor="background.default"
                 display="flex"
